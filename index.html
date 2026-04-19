@@ -137,6 +137,38 @@
       height: auto;
       display: block;
     }
+    /* MOBILE FIX */
+@media (max-width: 700px) {
+
+  .container {
+    padding: 20px;
+  }
+
+  .nav {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  /* stack gallery instead of squish */
+  .gallery-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* music section stacks */
+  .music-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  iframe {
+    height: 180px;
+  }
+
+  #home-image img {
+    max-width: 220px;
+  }
+}
   </style>
 </head>
 
