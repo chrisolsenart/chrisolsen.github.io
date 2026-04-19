@@ -51,6 +51,18 @@
       font-size: 14px;
       line-height: 1.6;
     }
+    .gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
   </style>
 </head>
 <body>
@@ -63,7 +75,11 @@
     <a href="#" onclick="showSection('cv')">CV</a>
   </div>
 
-  <div id="music" class="section active">
+<div class="gallery">
+  <img src="image1.jpg" alt="">
+  <img src="image2.jpg" alt="">
+  <img src="image3.jpg" alt="">
+</div>
     <p>Music projects, recordings, or embedded players go here.</p>
   </div>
 
