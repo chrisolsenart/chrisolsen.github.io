@@ -42,7 +42,7 @@
       font-size: 14px;
     }
 
-    /* HOME OVERLAY */
+    /* HOME */
     #home-image {
       position: fixed;
       inset: 0;
@@ -59,7 +59,7 @@
       height: auto;
     }
 
-    /* MAIN LAYOUT */
+    /* LAYOUT */
     .container {
       padding: 40px;
       max-width: 900px;
@@ -75,7 +75,21 @@
       display: block;
     }
 
-    /* MUSIC LAYOUT */
+    h1, h2 {
+      font-weight: normal;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* MUSIC */
     .music-layout {
       display: flex;
       gap: 40px;
@@ -114,7 +128,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      width: 100%;
       max-width: 900px;
       margin: 0 auto;
     }
@@ -122,21 +135,7 @@
     .gallery-row img {
       width: 100%;
       height: auto;
-    }
-
-    /* TEXT */
-    h1, h2 {
-      font-weight: normal;
-    }
-
-    h2 {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 14px;
-      line-height: 1.6;
+      display: block;
     }
   </style>
 </head>
@@ -152,7 +151,7 @@
     <a href="#" onclick="showSection('cv'); return false;">CV</a>
   </div>
 
-  <!-- HOME OVERLAY -->
+  <!-- HOME -->
   <div id="home-image">
     <img src="profile.jpg" alt="Profile" />
   </div>
@@ -164,7 +163,6 @@
       <h2>Music</h2>
 
       <div class="music-layout">
-
         <div class="music-left">
           Dark Ride<br>
           <a href="music/album-one.zip">download</a><br><br>
@@ -173,26 +171,14 @@
           <a href="music/album-two.zip">download</a><br><br>
 
           Videos<br>
-          <a href="https://www.youtube.com/watch?v=AFG7LSG9nDM" target="_blank">Lonely Heart (music video)</a><br>
+          <a href="https://www.youtube.com/watch?v=AFG7LSG9nDM" target="_blank">Lonely Heart</a><br>
           <a href="https://www.youtube.com/watch?v=30VXdVfeZcc" target="_blank">Live @ Boca del Cielo</a>
         </div>
 
         <div class="music-right">
-         <iframe width="100%" height="220"
-  src="https://www.youtube.com/embed/Gau31hGPytQ?autoplay=1&mute=1&playsinline=1"
-  frameborder="0"
-  allow="autoplay; encrypted-media; fullscreen"
-  allowfullscreen>
-</iframe>
-
-<iframe width="100%" height="220"
-  src="https://www.youtube.com/embed/eTeD8DAta4c?autoplay=1&mute=1&playsinline=1"
-  frameborder="0"
-  allow="autoplay; encrypted-media; fullscreen"
-  allowfullscreen>
-</iframe>
+          <iframe src="https://www.youtube.com/embed/Gau31hGPytQ?autoplay=1&mute=1&playsinline=1"></iframe>
+          <iframe src="https://www.youtube.com/embed/eTeD8DAta4c?autoplay=1&mute=1&playsinline=1"></iframe>
         </div>
-
       </div>
     </div>
 
@@ -201,47 +187,39 @@
       <h2>My Galveston</h2>
 
       <div class="gallery-row">
-        <img src="brain.JPG" alt="" />
-        <img src="bunny.JPG" alt="" />
-      </div><br><br>
+        <img src="brain.JPG" alt="">
+        <img src="bunny.JPG" alt="">
+      </div>
 
-       <div class="gallery-row">
-        <img src="inside_rock.JPG" alt="" />
-        <img src="tree.jpg" alt="" />
-      </div><br><br>
+      <br><br>
 
       <div class="gallery-row">
-        <img src="rain.png" alt="" />
-        <img src="overhead.JPG" alt="" />
-      </div><br><br>
-      
+        <img src="inside_rock.JPG" alt="">
+        <img src="tree.jpg" alt="">
+      </div>
 
-<h2>The Secret</h2>
+      <br><br>
 
-<div class="gallery" onclick="startSecret()" style="cursor: pointer;">
-  
-  <video id="secretVideo" width="100%" loop playsinline>
-    <source src="secret.mp4" type="video/mp4">
-  </video>
+      <div class="gallery-row">
+        <img src="rain.png" alt="">
+        <img src="overhead.JPG" alt="">
+      </div>
 
-  <p style="font-size: 12px; margin-top: 10px;">
-    click anywhere to enter
-  </p>
+      <br><br>
 
-</div>
+      <h2>The Secret</h2>
 
-<script>
-let started = false;
+      <div class="gallery" onclick="startSecret()" style="cursor: pointer;">
+        <video id="secretVideo" width="100%" loop playsinline>
+          <source src="secret.mp4" type="video/mp4">
+        </video>
 
-function startSecret() {
-  if (started) return;
-  started = true;
+        <p style="font-size: 12px; margin-top: 10px;">
+          click anywhere to enter
+        </p>
+      </div>
+    </div>
 
-  const video = document.getElementById("secretVideo");
-  video.muted = false;
-  video.play();
-}
-</script>
     <!-- SHOWS -->
     <div id="shows" class="section">
       <h2>Shows</h2>
@@ -260,39 +238,52 @@ function startSecret() {
     <!-- CV -->
     <div id="cv" class="section">
       <h2>CV</h2>
-      
-      <p>chrisolsen502@gmail.com<br><br>
 
-Education<br><br>
-2024<br>
-BFA, CalArts<br>
-Valencia, CA<br><br>
+      <p>
+        chrisolsen502@gmail.com<br><br>
 
-Solo Exhibitions:<br>
+        Education<br><br>
+        2024<br>
+        BFA, CalArts<br>
+        Valencia, CA<br><br>
 
-2024<br>
-My Galveston, Automata, Los Angeles, CA<br><br>
+        Solo Exhibitions:<br><br>
+        2024<br>
+        My Galveston, Automata, Los Angeles, CA<br><br>
 
-Group Exhibitions:<br>
-
-2025<br>
-Wood Games, Far East Plaza, Los Angeles, CA<br>
-Luggage, June St., Los Angeles, CA
-
-</p>
+        Group Exhibitions:<br><br>
+        2025<br>
+        Wood Games, Far East Plaza, Los Angeles, CA<br>
+        Luggage, June St., Los Angeles, CA
+      </p>
     </div>
 
   </div>
 
   <script>
+    let started = false;
+
+    function startSecret() {
+      if (started) return;
+      started = true;
+
+      const video = document.getElementById("secretVideo");
+      if (video) {
+        video.muted = false;
+        video.play();
+      }
+    }
+
     function showSection(id) {
-      document.getElementById('home-image').style.display = 'none';
+      const home = document.getElementById('home-image');
+      if (home) home.style.display = 'none';
 
       document.querySelectorAll('.section').forEach(sec => {
         sec.classList.remove('active');
       });
 
-      document.getElementById(id).classList.add('active');
+      const target = document.getElementById(id);
+      if (target) target.classList.add('active');
     }
   </script>
 
