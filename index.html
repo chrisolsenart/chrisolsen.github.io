@@ -12,6 +12,25 @@
       background: white;
       color: black;
     }
+#home-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: white;
+}
+
+#home-image img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
 
  .container {
   padding: 40px;
@@ -100,6 +119,9 @@
 
 <div class="container">
   <div class="nav">
+    <div id="home-image">
+  <img src="profile.jpg" alt="">
+</div>
     <h1>Chris Olsen</h1>
     <a href="#" onclick="showSection('music')">Music</a>
     <a href="#" onclick="showSection('visual')">Visual Art</a>
