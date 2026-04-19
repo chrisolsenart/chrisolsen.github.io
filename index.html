@@ -13,13 +13,7 @@
       color: black;
     }
 #home-image {
-  z-index: 1;
-}
-
-.nav {
-  position: relative;
-  z-index: 2;
-}
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -30,8 +24,20 @@
   align-items: center;
 
   background: white;
+
+  z-index: 1;
 }
 
+#home-image img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+}
+
+.nav {
+  position: relative;
+  z-index: 2;
+}
 #home-image img {
   max-width: 320px;
   width: 100%;
