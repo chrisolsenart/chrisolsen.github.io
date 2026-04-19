@@ -240,21 +240,23 @@
 
    <h2>The Secret</h2>
 
-<div class="gallery">
-  <video 
-    id="secretVideo"
-    width="100%"
-    loop
-    playsinline
+<!-- VIDEO SECTION (replace secret section) -->
+<div style="max-width: 900px; margin: 40px auto; position: relative;">
+  
+  <video
+    id="wobblersVideo"
+    autoplay
     muted
-    poster="brain.JPG"
-    onclick="startSecret()"
+    playsinline
+    controls
+    preload="auto"
+    style="width: 100%; height: auto; display: block; background: black;"
   >
-    <source src="wobblers.mp4" type="video/mp4">
+    <source src="wobblers.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
   </video>
 
-  <p style="font-size: 12px; margin-top: 10px;">
-    click anywhere to enter
+</div>
   </p>
 </div>
     <!-- SHOWS -->
