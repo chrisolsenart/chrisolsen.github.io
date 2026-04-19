@@ -110,20 +110,6 @@
     }
 
     /* GALLERY */
-    .gallery {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      margin-top: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      display: block;
-    }
-
     .gallery-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -140,7 +126,6 @@
 
     /* MOBILE FIX */
     @media (max-width: 700px) {
-
       .container {
         padding: 20px;
       }
@@ -191,7 +176,6 @@
 
     <!-- MUSIC -->
     <div id="music" class="section active">
-
       <div class="music-layout">
         <div class="music-left">
           Dark Ride<br>
@@ -214,6 +198,7 @@
 
     <!-- VISUAL -->
     <div id="visual" class="section">
+
       <h2>My Galveston</h2>
 
       <div class="gallery-row">
@@ -236,25 +221,22 @@
       </div>
 
       <br><br>
-    </div>
 
-    <!-- SECRET -->
-   <br><br>
+      <!-- SECRET (NOW CORRECTLY INSIDE VISUAL) -->
+      <h2>The Secret</h2>
 
-<h2>The Secret</h2>
-
-<div style="
-  max-width: 700px;
-  margin: 40px auto 20px auto;
-  text-align: center;
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-style: italic;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #111;
-  opacity: 0.9;
-">
-  <p>   
+      <div style="
+        max-width: 700px;
+        margin: 40px auto 20px auto;
+        text-align: center;
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-style: italic;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #111;
+        opacity: 0.9;
+      ">
+        <p>
 Do you know about the bricks on the street?<br>
 If you listen, you can hear them talking…<br>
 They say “everybody dreams,” you know.<br>
@@ -272,22 +254,18 @@ They sing, “everybody loves,” you know.<br>
 “Everybody loves,” you know.<br>
 “Everybody loves,” you know.<br>
 “Everybody loves,” you know.
-  </p>
-</div>
+        </p>
+      </div>
 
-<div style="max-width: 900px; margin: 40px auto; position: relative;">
-  <video
-    autoplay
-    muted
-    playsinline
-    controls
-    preload="auto"
-    style="width: 100%; height: auto; display: block; background: black;"
-  >
-    <source src="wobblers.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
+      <div style="max-width: 900px; margin: 40px auto;">
+        <video autoplay muted playsinline controls preload="auto"
+          style="width: 100%; height: auto; display: block; background: black;">
+          <source src="wobblers.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+    </div>
+
     <!-- SHOWS -->
     <div id="shows" class="section">
       <h2>Upcoming</h2><br><br>
@@ -326,7 +304,6 @@ They sing, “everybody loves,” you know.<br>
 
   </div>
 
-  <!-- JS FIX -->
   <script>
     function showSection(id) {
       document.querySelectorAll('.section').forEach(section => {
