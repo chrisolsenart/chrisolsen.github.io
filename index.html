@@ -27,7 +27,7 @@
       position: fixed;
       top: 40px;
       left: 40px;
-      z-index: 20;
+      z-index: 10;
     }
 
     .nav h1 {
@@ -42,7 +42,7 @@
       font-size: 14px;
     }
 
-    /* HOME IMAGE */
+    /* HOME */
     #home-image {
       position: fixed;
       inset: 0;
@@ -59,28 +59,11 @@
       height: auto;
     }
 
-    /* 🌫️ GIF OVERLAY */
-    #home-overlay {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      width: 140vw;
-      height: 140vh;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      opacity: 0.18;
-      z-index: 3;
-      pointer-events: none;
-      transition: opacity 0.8s ease;
-    }
-
     /* LAYOUT */
     .container {
       padding: 40px;
       max-width: 900px;
       margin: 0 auto;
-      position: relative;
-      z-index: 10;
     }
 
     .section {
@@ -110,7 +93,6 @@
     .music-layout {
       display: flex;
       gap: 40px;
-      position: relative;
     }
 
     .music-left,
@@ -125,17 +107,6 @@
       height: 220px;
       border: none;
       margin-bottom: 20px;
-    }
-
-    /* GIF (corner decoration) */
-    .music-gif {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      width: 70px;
-      height: auto;
-      z-index: 5;
-      pointer-events: none;
     }
 
     /* GALLERY */
@@ -153,7 +124,7 @@
       display: block;
     }
 
-    /* MOBILE */
+    /* MOBILE FIX */
     @media (max-width: 700px) {
       .container {
         padding: 20px;
@@ -182,20 +153,40 @@
         max-width: 220px;
       }
     }
+    /* MUSIC GIF (bottom-left corner of music section) */
+.music-layout {
+  position: relative;
+}
+
+.music-gif {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 70px;
+  height: auto;
+  z-index: 10;
+  pointer-events: none;
+}
+    .donate-button {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  border: 1px solid black;
+  padding: 6px 10px;
+}
+
   </style>
 </head>
 
 <body>
 
-  <!-- 🌫️ FULLSCREEN GIF OVERLAY -->
-  <img src="_.gif" id="home-overlay" alt="">
 
   <!-- NAV -->
   <div class="nav">
     <h1>Chris Olsen</h1>
     <a href="#" onclick="showSection('music'); return false;">Music</a>
     <a href="#" onclick="showSection('visual'); return false;">Visual Art</a>
-    <a href="#" onclick="showSection('shows'); return false;">Shows</a>
+    <a href="#" onclick="showSection('calendar'); return false;">Calendar</a>
     <a href="#" onclick="showSection('cv'); return false;">CV</a>
   </div>
 
@@ -206,55 +197,140 @@
 
   <div class="container">
 
-    <!-- MUSIC -->
-    <div id="music" class="section active">
-      <div class="music-layout">
+  <!-- MUSIC -->
+<div id="music" class="section active">
+  <div class="music-layout">
 
-        <div class="music-left">
-          <h2>Albums</h2>
-          Dark Ride<br>
-          <a href="https://chrisolsen.bandcamp.com/album/dark-ride" target="_blank">stream</a><br><br>
+    <div class="music-left">
+      <h2>Albums</h2>
+      Dark Ride:
+    <a href="https://chrisolsen.bandcamp.com/album/dark-ride" target="_blank">stream</a><br>
 
-          Sam Cooper/Chris Olsen<br>
-          <a href="https://oppasamuelstyle.bandcamp.com/album/sam-cooper-chris-olsen" target="_blank">stream</a><br><br>
+       Sam Cooper/Chris Olsen:
+    <a href="https://oppasamuelstyle.bandcamp.com/album/sam-cooper-chris-olsen" target="_blank">stream</a><br>
 
-          Human! Sound! —> & or the record i could never finish (even if i wanted to)<br>
-          <a href="https://vandank.bandcamp.com/album/chris-olsen-human-sound-or-the-record-i-could-never-finish-even-if-i-wanted-to">download</a><br><br>
+      Human! Sound! —> & or the record i could never finish (even if i wanted to):
+       <a href="https://vandank.bandcamp.com/album/chris-olsen-human-sound-or-the-record-i-could-never-finish-even-if-i-wanted-to" target="_blank">stream</a>
 
-          <h2>Videos</h2>
-          <a href="https://www.youtube.com/watch?v=AFG7LSG9nDM" target="_blank">Lonely Heart (music video)</a><br>
-          <a href="https://www.youtube.com/watch?v=30VXdVfeZcc" target="_blank">Live @ Boca del Cielo</a>
-        </div>
-
-        <div class="music-right">
-          <iframe src="https://www.youtube.com/embed/Gau31hGPytQ?autoplay=1&mute=1&playsinline=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=Gau31hGPytQ"></iframe>
-
-          <iframe src="https://www.youtube.com/embed/eTeD8DAta4c?autoplay=1&mute=1&playsinline=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=eTeD8DAta4c"></iframe>
-        </div>
-
-        <img src="dezyne_3d-skeleton-13967.gif" class="music-gif" alt="">
-
-      </div>
+      <h2>Videos</h2>
+      <a href="https://www.youtube.com/watch?v=AFG7LSG9nDM" target="_blank">Lonely Heart (music video)</a><br>
+      <a href="https://www.youtube.com/watch?v=30VXdVfeZcc" target="_blank">Live @ Boca del Cielo</a>
     </div>
 
+  <div class="music-right">
+  <iframe src="https://www.youtube.com/embed/Gau31hGPytQ?autoplay=1&mute=1&playsinline=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=Gau31hGPytQ"></iframe>
+
+  <iframe src="https://www.youtube.com/embed/eTeD8DAta4c?autoplay=1&mute=1&playsinline=1&controls=0&modestbranding=1&rel=0&loop=1&playlist=eTeD8DAta4c"></iframe>
+</div>
+    <img src="dezyne_3d-skeleton-13967.gif" class="music-gif" alt="">
+
+  </div>
+</div>
     <!-- VISUAL -->
     <div id="visual" class="section">
+
       <h2>My Galveston</h2>
 
       <div class="gallery-row">
         <img src="brain.JPG" alt="">
         <img src="bunny.JPG" alt="">
       </div>
+
+      <br><br>
+
+      <div class="gallery-row">
+        <img src="inside_rock.JPG" alt="">
+        <img src="tree.jpg" alt="">
+      </div>
+
+      <br><br>
+
+      <div class="gallery-row">
+        <img src="rain.png" alt="">
+        <img src="overhead.JPG" alt="">
+      </div>
+
+      <br><br>
+
+      <!-- SECRET (NOW CORRECTLY INSIDE VISUAL) -->
+      <h2>The Secret</h2>
+
+      <div style="
+        max-width: 700px;
+        margin: 40px auto 20px auto;
+        text-align: center;
+        font-family: 'Georgia', 'Times New Roman', serif;
+        font-style: italic;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #111;
+        opacity: 0.9;
+      ">
+        <p>
+Do you know about the bricks on the street?<br>
+If you listen, you can hear them talking…<br>
+They say “everybody dreams,” you know.<br>
+“Everybody dreams,” you know.<br><br>
+
+And did you know that on a winter’s breeze,<br>
+The streetlights gently whisper?<br>
+They say, “everybody wants,” you know.<br>
+“Everybody wants,” you know.<br><br>
+
+And during spring,<br>
+There’s this peculiar thing…<br>
+You can hear the motors singing.<br>
+They sing, “everybody loves,” you know.<br>
+“Everybody loves,” you know.<br>
+“Everybody loves,” you know.<br>
+“Everybody loves,” you know.
+        </p>
+      </div>
+
+      <div style="max-width: 900px; margin: 40px auto;">
+        <video autoplay muted playsinline controls preload="auto"
+          style="width: 100%; height: auto; display: block; background: black;">
+          <source src="wobblers.mp4" type="video/mp4" />
+        </video>
+      </div>
+
     </div>
 
-    <!-- SHOWS -->
-    <div id="shows" class="section">
+    <!-- CALENDAR -->
+    <div id="calendar" class="section">
       <h2>Upcoming</h2>
+      April 25, 2026 - house show (Brooklyn, NY)<br>
+      May 16, 2026 - Little Window (Kingston, NY)<br>
+      May 21, 2026 - Amma Cafe (Ridgewood, NY)*<br><br>
+
+      <h2>Past</h2>
+      March 31, 2026 - Little Window (Kingston, NY)<br>
+      March 29, 2026 - The Record Shop (Brooklyn, NY)<br>
+      November 13, 2025 - Footsie's (Los Angeles, CA)<br><br>*with Cookie
+      November 13, 2025 - Footsie's (Los Angeles, CA)<br><br><br><br>*with Cookie
     </div>
 
     <!-- CV -->
     <div id="cv" class="section">
       <h2>CV</h2>
+
+      <p>
+        chrisolsen502@gmail.com<br><br>
+
+        Education:<br>
+        2024<br>
+        BFA, CalArts<br>
+        Valencia, CA<br><br>
+
+        Solo Exhibitions:<br>
+        2024<br>
+        My Galveston, Automata, Los Angeles, CA<br><br>
+
+        Group Exhibitions:<br>
+        2025<br>
+        Wood Games, Far East Plaza, Los Angeles, CA<br>
+        Luggage, June St., Los Angeles, CA
+      </p>
     </div>
 
   </div>
@@ -268,10 +344,7 @@
       document.getElementById(id).classList.add('active');
 
       const home = document.getElementById('home-image');
-      const overlay = document.getElementById('home-overlay');
-
       if (home) home.style.display = 'none';
-      if (overlay) overlay.style.opacity = '0';
     }
   </script>
 
