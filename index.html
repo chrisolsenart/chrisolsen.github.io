@@ -216,15 +216,24 @@
       </div><br><br>
       
 
-     <h2>The Secret</h2>
+    <h2>The Secret</h2>
+
+<button onclick="startSecret()" style="margin-bottom: 20px;">
+  Enter The Secret
+</button>
 
 <div class="gallery">
-  <video width="100%" autoplay muted loop playsinline>
-    <source src="wobblers.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+  <video id="secretVideo" width="100%" loop playsinline>
+    <source src="secret.mp4" type="video/mp4">
   </video>
 </div>
 
+<script>
+function startSecret() {
+  const video = document.getElementById("secretVideo");
+  video.play();
+}
+</script>
     <!-- SHOWS -->
     <div id="shows" class="section">
       <h2>Shows</h2>
