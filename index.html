@@ -216,21 +216,29 @@
       </div><br><br>
       
 
-    <h2>The Secret</h2>
+<h2>The Secret</h2>
 
-<button onclick="startSecret()" style="margin-bottom: 20px;">
-  Enter The Secret
-</button>
-
-<div class="gallery">
+<div class="gallery" onclick="startSecret()" style="cursor: pointer;">
+  
   <video id="secretVideo" width="100%" loop playsinline>
     <source src="secret.mp4" type="video/mp4">
   </video>
+
+  <p style="font-size: 12px; margin-top: 10px;">
+    click anywhere to enter
+  </p>
+
 </div>
 
 <script>
+let started = false;
+
 function startSecret() {
+  if (started) return;
+  started = true;
+
   const video = document.getElementById("secretVideo");
+  video.muted = false;
   video.play();
 }
 </script>
